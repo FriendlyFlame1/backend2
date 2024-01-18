@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const port = 5000;
 
@@ -8,7 +9,7 @@ const data = [
   { id: 2, name: 'yash2' },
   { id: 3, name: 'yash3' },
 ];
-
+app.use(cors());
 // Define a route to fetch data
 app.get('/api/data', (req, res) => {
   res.json(data);
