@@ -5,13 +5,13 @@ const port = 5000;
 
 // Sample data to serve
 const data = [
-  { id: 1, name: 'yash1' },
-  { id: 2, name: 'yash2' },
-  { id: 3, name: 'yash3' },
+  { id: 1, Text: 'Welcome' },
+  { id: 2,  Text: 'Server by Yash' },
+  { id: 3, Text: 'Data by Backend' },
 ];
 app.use(cors());
 // Define a route to fetch data
-app.get('/api/data', (req, res) => {
+app.get('/api/yash', (req, res) => {
   res.json(data);
 });
 app.listen(port, () => {
